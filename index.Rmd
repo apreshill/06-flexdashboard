@@ -5,6 +5,17 @@ output:
     orientation: columns
     vertical_layout: fill
     source_code: embed
+    css: my-custom-rules.scss
+    theme:
+      version: 4
+      bg: "#fff"
+      fg: "#000" 
+      primary: "#ED79F9"
+      navbar-bg: "#3ADAC6"
+      base_font: 
+        google: DM Mono
+      heading_font:
+        google: Sen
 ---
 
 ```{r setup, include=FALSE}
@@ -14,10 +25,13 @@ library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
 # Page 1
 
 
 ## Column {data-width="450"}
+
+This is a [purple]{.my-purple} word.
 
 ### Flipper length by species
 
@@ -40,7 +54,7 @@ ggplot(penguins, aes(x = island, fill = species)) +
   coord_flip()
 ```
 
-## Column {data-width="350"}
+## Column {data-width="350"} {.tabset}
 
 ### Bill length by depth
 
